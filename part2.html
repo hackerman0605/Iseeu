@@ -26,6 +26,10 @@
         .instruction{
             margin-top: 20px;
         }
+        #hint{
+            margin-top:20px;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -33,8 +37,11 @@
         <div class="box-counter">0</div>
         <div class="box"></div>
         <div class="instruction">
-            CLICK the box 75 times HAHAHAHAHA <br>
-            Sabi nga nila Love is patient, love is kind
+            CLICK the box 75 times HAHAHAHAHA <br> <br>
+            Sabi nga nila Love is patient, love is kind, it does not envy, it does not boast, it is not proud,it is not self-seeking,it is not easily angered, it keeps no record of wrongs, it always protects, alwayst trust, always hopes, always perservere pak ganern
+        </div>
+        <div id="hint">
+            Oh copy paste ulit ng code bro para idecode pero i decode mo sia using base64 format heres the link nung website: https://www.base64decode.org/ <br><br> <span style="color:green">RmluZCBoaW0gb24gZmFjZWJvb2sgVmluY2UgR2FyY2lhIHRoYXQgbGl2ZXMgaW4gQmluYW4=</span>
         </div>
     </div>
     <script>
@@ -42,7 +49,9 @@
         $('.box').click(()=>{
             boxCounter++;
             $('.box-counter').text(boxCounter)
-            
+            if(boxCounter >= 75){
+                $('#hint').css({display:'block'})
+            }
         });
     </script>
 </body>
