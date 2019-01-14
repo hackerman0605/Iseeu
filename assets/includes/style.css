@@ -20,6 +20,9 @@ li{
     font-size: 25px;
     float: left;
 }
+#logo-container a{
+    color: white;
+}
 #collapse{
     position: fixed;
     text-align: center;
