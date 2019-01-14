@@ -5,10 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Part 3 of the instruction</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="../assets/includes/style.css" />
+    <script src="../assets/includes/jquery-3.3.1.min.js"></script>
+    <style>
+     input{
+            display: block;
+            margin: auto;
+            padding: 10px 20px 10px 5px;
+        }
+        .btn{
+            margin-top: 10px;
+            padding: 4px 15px;
+            border-radius: 10px;
+            border:none;
+            border:1px solid black;
+            cursor:pointer;
+        }
+        .container{
+            position: absolute;
+            width:90%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align:center;
+        }
+        .title-title{
+            margin: 10px 0px;
+        }
+        .body{
+            margin: 10px 0px;
+        }
+        #hint{
+            margin-top: 20px;
+            color:green;
+        }
+        </style>
 </head>
 <body>
-    <h1>Part 3 boss hahaha</h1>
+    <div class="container">
+        <div class="title"> <h3>This will be the last part of the game hahaha do you have what it takes to be a millionaire, charot</h3></div>
+        <div class="title-title" style="font-weight: 600;">
+            Riddle Me This
+        </div>
+        <div class="body">What is greater than God,
+                more evil than the devil,
+                the poor have it,
+                the rich need it,
+                and if you eat it, you'll die? (A test of ur belief GIA HAHAHAHA) </div>
+        <div class="input-container">
+            <input id="answer" type="text" placeholder="Input your answer here">
+            <button class="btn">SUBMIT</button>
+        </div>
+        <div id="hint">
+            YEHEY TAPOS NA HAHAHAHAHA, Now I owe u a wish, kahit anong ihiling mo, Tutuparin ko with my best HAHAHA ayown lang thanks sa time bro. kapag may suggestion ka sa game suggest lang hahaha puro riddles kasi e  kakatamad ung mahihirapan pa dapat ung ibang tao hahaha gawan ko kaya ng real na game hahaha kaso super time consuming kasi sa lalaro, chat nalang putek
+        </div>
+    </div>
+    <script>
+        $('.btn').click(()=>{
+            if($('#answer').val() == "" ){
+                $('#hint').css({display:'block'})
+            }else{
+                alert("WRONG ANSWER T.T")
+            }
+        })
+    </script>
 </body>
 </html>
