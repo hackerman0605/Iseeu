@@ -43,6 +43,9 @@
             display: none;
             margin-top: 10px;
         }
+        #hint{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -54,7 +57,7 @@
         <div class="riddle-body">
             "What is harmless but can kill you?"
            <br> (No searching on google, okay? hahaha)
-           <br> (Tic-Toc-Tic-Toc the time is running out u got 30 secs)
+           <br> (Tic-Toc-Tic-Toc the time is running out u got 15 secs)
         </div>
         <div class="input-container">
             <input id="answer" type="text" placeholder="Input your answer here">
@@ -63,6 +66,9 @@
         <div id="show-up">
             JOKE LANG TAKE YOUR TIME
         </div>
+        <div id="hint">
+               You got it right <br> Copy & Paste The Code Below on this url to decode https://www.rot13.com/  <br><br><br><span style="color:green;">Uv, Zl anzr vf Cngevpx, Unun avpr avpr, pbatengf sbe trggvat urer, ohg whfg n yvggyr zber bxnl? Tb urer uggcf://unpxrezna0605.tvguho.vb/Vfrrh/cneg2.ugzy</span>
+        </div>
     </div>
     <script>
         var num = 0;
@@ -70,14 +76,14 @@
             var num = parseInt($('.time-container').text());
              num++;
              $('.time-container').text(num);
-             if(num >=30){
+             if(num >=15){
              $('#show-up').css({display:'block'})
             }
         },1000);
         
        $('.btn').click(function(){
            if($('#answer').val().toLowerCase() == "time"){
-                alert('You got it right\nCopy & Paste The Code Below on this url https://www.rot13.com/ \n to decode \n\nUv, Zl anzr vf Cngevpx, Unun avpr avpr, pbatengf sbe trggvat urer, ohg whfg n yvggyr zber bxnl? Tb urer uggcf://unpxrezna0605.tvguho.vb/Vfrrh/cneg2.ugzy')
+               $('#hint').css({display:'block'})
            }else{
             alert('Sorry wrong T.T')
            }
