@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PART 1 of the instruction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/includes/style.css">
+    <script src="assets/includes/jquery-3.3.1.min.js"></script>
+    <style>
+        .riddle-container{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .riddle-title{
+            font-weight: 600;
+            font-size:1.4em;
+        }
+        input{
+            display: block;
+            margin: auto;
+            padding: 10px 20px 10px 5px;
+        }
+        .btn{
+            margin-top: 10px;
+            padding: 4px 15px;
+            border-radius: 10px;
+            border:none;
+            border:1px solid black;
+            cursor:pointer;
+        }
+        .btn:hover{
+
+        }
+        .riddle-body{
+            margin: 10px;
+        }
+        #show-up{
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="riddle-container">
+        <div class="time-container">0</div>
+        <div class="riddle-title">
+            RIDDLE ME THIS
+        </div>
+        <div class="riddle-body">
+            "What is harmless but can kill you?"
+           <br> (No searching on google, okay? hahaha)
+           <br> (Tic-Toc-Tic-Toc the time is running out u got 10 secs)
+        </div>
+        <div class="input-container">
+            <input id="answer" type="text" placeholder="Input your answer here">
+            <button class="btn">SUBMIT</button>
+        </div>
+        <div id="show-up">
+            JOKE LANG TAKE YOUR TIME
+        </div>
+    </div>
+    <script>
+        var num = 0;
+        setInterval(function(){
+            var num = parseInt($('.time-container').text());
+             num++;
+             $('.time-container').text(num);
+             if(num >=10){
+             $('#show-up').css({display:'block'})
+            }
+        },1000);
+        
+       $('.btn').click(function(){
+           if($('#answer').val().toLowerCase() == "time"){
+                alert('You got the it right \n Copy & Paste Dis Code Below on ROT13 decoder (search it on google na hahaha) \n\n')
+           }else{
+            alert('Sorry wrong T.T')
+           }
+       })
+    </script>
+</body>
+</html>
