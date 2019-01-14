@@ -54,7 +54,7 @@
         <div class="riddle-body">
             "What is harmless but can kill you?"
            <br> (No searching on google, okay? hahaha)
-           <br> (Tic-Toc-Tic-Toc the time is running out u got 10 secs)
+           <br> (Tic-Toc-Tic-Toc the time is running out u got 30 secs)
         </div>
         <div class="input-container">
             <input id="answer" type="text" placeholder="Input your answer here">
@@ -70,14 +70,14 @@
             var num = parseInt($('.time-container').text());
              num++;
              $('.time-container').text(num);
-             if(num >=10){
+             if(num >=30){
              $('#show-up').css({display:'block'})
             }
         },1000);
         
        $('.btn').click(function(){
            if($('#answer').val().toLowerCase() == "time"){
-                alert('You got the it right \n Copy & Paste Dis Code Below on ROT13 decoder (search it on google na hahaha) \n\n')
+                alert('You got it right\nCopy & Paste The Code Below on this url https://www.rot13.com/ \n to decode \n\nUv, Zl anzr vf Cngevpx, Unun avpr avpr, pbatengf sbe trggvat urer, ohg whfg n yvggyr zber bxnl? Tb urer uggcf://unpxrezna0605.tvguho.vb/Vfrrh/cneg2.ugzy')
            }else{
             alert('Sorry wrong T.T')
            }
